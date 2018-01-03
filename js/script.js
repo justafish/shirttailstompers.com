@@ -30,7 +30,7 @@ fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlist
         e.preventDefault();
         player.loadVideoById(link.getAttribute('data-ytid'));
       });
-      link.append(img);
+      link.appendChild(img);
       li.appendChild(link);
       listInner.appendChild(li);
     });
