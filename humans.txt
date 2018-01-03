@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Sally Young -- Coder -- @justafish
+    Roland MacDonald -- Design -- @RolandDraws
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Normalize.css
+    https://www.shareicon.net/facebook-social-media-facebook-logo-facebook-button-886194
+    https://www.shareicon.net/instagram-button-social-media-instagram-instagram-logo-886212
+    https://www.shareicon.net/social-media-twitter-logo-twitter-bird-886209

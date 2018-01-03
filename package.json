@@ -1,0 +1,19 @@
+{
+  "name": "shirttailstompers",
+  "version": "1.0.0",
+  "main": "js/script.js",
+  "author": "Sally Young <sally@justafish.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "isomorphic-fetch": "^2.2.1",
+    "uglifyify": "^4.0.5",
+    "youtube-player": "^5.4.0"
+  },
+  "scripts": {
+    "bundle": "./node_modules/.bin/browserify -t babelify js/script.js -t uglifyify -o js/script.min.js"
+  }
+}
