@@ -1,3 +1,4 @@
+require('babel-polyfill');
 const fetch = require('isomorphic-fetch');
 const youTubePlayer = require('youtube-player');
 
