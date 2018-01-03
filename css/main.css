@@ -273,12 +273,13 @@ img {
  */
 .contact {
   padding: 1rem;
-  font-size: 6vw;
+  font-size: 5vw;
+  line-height: 1.5;
 }
 
 @media (min-width : 48em) {
   .contact {
-    font-size: 2vw;
+    font-size: 2.25vw;
   }
 }
 
