@@ -180,9 +180,32 @@ img {
   margin: 0;
   padding :0;
   list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1rem;
+}
+
+@media (min-width : 30em) {
+  .cd ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cd li {
+    width: 50%;
+  }
+}
+
+.cd li:first-child {
+  margin-bottom: 1rem;
+}
+
+@media (min-width : 30em) {
+  .cd li:first-child {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+  }
+
+  .cs li:last-child {
+    margin-left: 0.5rem;
+  }
 }
 
 .cd:before {
