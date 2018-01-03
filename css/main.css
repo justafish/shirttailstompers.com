@@ -159,6 +159,10 @@ img {
   padding: 1rem;
 }
 
+.cd img {
+  width: 100%;
+}
+
 .cd a {
   display: block;
   border: 1px solid #f0cfcf;
