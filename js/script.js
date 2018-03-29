@@ -1,6 +1,6 @@
 require('babel-polyfill');
 const fetch = require('isomorphic-fetch');
-const youTubePlayer = require('youtube-player');
+const youTubePlayer = require('yt-player');
 
 /**
  * Videos
@@ -8,7 +8,7 @@ const youTubePlayer = require('youtube-player');
 // Generated at https://console.developers.google.com/apis/credentials
 const youTubeKey = 'AIzaSyDsRp772hAESsvu5cKVYofvXNbepWkLk7k';
 
-const player = youTubePlayer('video-player');
+const player = new youTubePlayer('#video-player');
 const list = document.querySelector('.video-thumbnails');
 const listInner = document.createElement('ul');
 
@@ -16,7 +16,7 @@ fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlist
   .then(response => response.json())
   .then(response => response.items.map(item => item.snippet))
   .then(items => {
-    player.cueVideoById(items[0].resourceId.videoId);
+    player.load(items[0].resourceId.videoId, false);
 
     items.forEach(item => {
       const li = document.createElement('li');
@@ -28,7 +28,7 @@ fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlist
       link.setAttribute('data-ytid', item.resourceId.videoId);
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        player.loadVideoById(link.getAttribute('data-ytid'));
+        player.load(link.getAttribute('data-ytid'));
       });
       link.appendChild(img);
       li.appendChild(link);
@@ -43,8 +43,8 @@ fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlist
 const dayOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const table = document.createElement('table');
-fetch('https://cdn.contentful.com/spaces/xzsiyum2s4j9/entries?' +
-  'access_token=d06c9d6884601c65215539301710240a84655d7d84d870ef5af84505002513f0' +
+fetch('https://cdn.contentful.com/spaces/q5cn5b15gi91/entries?' +
+  'access_token=bcfa9c48805fff739ed352d5759d00723e2e328bc45889381562c3efc8a13c3f' +
   '&content_type=gig' +
   '&order=fields.dateAndTime')
   .then(response => response.json())

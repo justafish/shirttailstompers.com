@@ -58,6 +58,12 @@ h1 {
   text-align: center;
 }
 
+@media (min-width : 48em) {
+  h1 {
+    font-size: 8vw;
+  }
+}
+
 h1 small {
   display: block;
 }
@@ -74,7 +80,7 @@ h2 {
 
 @media (min-width : 48em) {
   h2 {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 
@@ -302,7 +308,7 @@ img {
 
 @media (min-width : 48em) {
   .contact {
-    font-size: 2vw;
+    font-size: 1.75vw;
   }
 }
 
