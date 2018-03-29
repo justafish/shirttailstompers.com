@@ -97,6 +97,10 @@ img {
   height: auto;
 }
 
+table {
+  width: 100%;
+}
+
 .yellow-background {
   margin: 0;
   padding: 0;
