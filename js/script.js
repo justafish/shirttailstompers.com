@@ -84,7 +84,7 @@ fetch('https://cdn.contentful.com/spaces/q5cn5b15gi91/entries?' +
       row.appendChild(tdAddress);
 
       const tdDescription = document.createElement('td');
-      const descriptionText = document.createTextNode(item.description);
+      const descriptionText = item.description ? document.createTextNode(item.description) : document.createTextNode('');
       tdDescription.appendChild(descriptionText);
       row.appendChild(tdDescription);
 
