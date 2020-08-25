@@ -6,7 +6,7 @@ const youTubePlayer = require('yt-player');
  * Videos
  */
 // Generated at https://console.developers.google.com/apis/credentials
-const youTubeKey = 'AIzaSyD1DeOmS0xz-j6kQcPzxP4iGxJ9gaYQ_oE';
+const youTubeKey = 'AIzaSyBzFkg69RVtBRdgFDvn2xZ2xxjLARz3oaQ';
 
 const player = new youTubePlayer('#video-player');
 const list = document.querySelector('.video-thumbnails');
