@@ -6,13 +6,13 @@ const youTubePlayer = require('yt-player');
  * Videos
  */
 // Generated at https://console.developers.google.com/apis/credentials
-const youTubeKey = 'AIzaSyBzFkg69RVtBRdgFDvn2xZ2xxjLARz3oaQ';
+const ytk = 'AIzaSyAf9WCFn51gsNnb7PwNwCFaVDTvXr87H90';
 
 const player = new youTubePlayer('#video-player');
 const list = document.querySelector('.video-thumbnails');
 const listInner = document.createElement('ul');
 
-fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLB2FB2679A8BA210D&key=${youTubeKey}`)
+fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLB2FB2679A8BA210D&key=${ytk}`)
   .then(response => response.json())
   .then(response => response.items.map(item => item.snippet))
   .then(items => {
